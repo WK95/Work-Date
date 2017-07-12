@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.form-body {
+  width: 800px;
+  height: 900px;
+  border: 1px solid red;
+  position: relative; }
+
+#question {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  left: 130px;
+  bottom: 30px; }
+
+#form-title {
+  width: 500px;
+  height: 50px;
+  position: absolute;
+  left: 130px;
+  top: 0; }
+
+#title {
+  position: absolute;
+  left: 0px;
+  top: 15px; }
+
+#title, #group {
+  border-radius: 6px;
+  width: 300px;
+  height: 30px;
+  border: 1px solid #9E9E9E; }
+
+#title:focus, #group:focus {
+  border: 1px solid #0ee;
+  box-shadow: 0 0 3px 0px #0ee;
+  outline-style: none; }
+
+#form-group {
+  width: 500px;
+  height: 50px;
+  position: absolute;
+  left: 130px;
+  top: 80px; }
+
+#question {
+  border: 1px solid gray;
+  font-size: 16px; }
+
+#question:focus {
+  outline-style: none; }
+
+input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #757575;
+  font-size: 14px; }
+
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #757575;
+  font-size: 14px; }
+
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #757575;
+  font-size: 14px; }
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #757575;
+  font-size: 14px; }
+
+#submit {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+
+#sub {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  background-color: #009a61;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px; }
+
+#sub:focus {
+  outline-style: none;
+  border-radius: 5px;
+  background: #006741; }
+
+#tags ul li {
+  float: left; }
+
+#nav-tabs li {
+  margin-left: 10px; }
+
+#tags {
+  width: 300px;
+  height: 250px;
+  border: 1px solid red;
+  position: relative;
+  display: none; }
+
+.tab-pane {
+  position: absolute;
+  left: 5px;
+  top: 50px; }
+
+.tab-pane ul li {
+  margin-left: 5px; }
+
+.tag {
+  display: inline-block;
+  padding: 0 8px;
+  color: #017E66;
+  background: rgba(1, 126, 102, 0.08);
+  height: 24px;
+  line-height: 24px;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: center; }
+
+#tags #nav-tabs .active a {
+  border: none;
+  color: #fff;
+  background: #009A61; }
+
+#tags #nav-tabs li a {
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 2px 5px; }
+
+/*# sourceMappingURL=css.css.map */

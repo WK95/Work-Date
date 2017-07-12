@@ -1,20 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Question</title>
-  </head>
-  <body>
-    <div class="form-body">
-      <form method="get" class="form">
-        <div id="form-title">
-          <label for="title">标题</label>
-          <input type="text" placeholder="简短描述你的问题">
-        </div>
+    <link rel="stylesheet" href="./sass/css.css" media="screen">
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/question.js"></script>
+</head>
 
-      </form>
+<body>
+    <div class="form-body">
+        <form method="get" class="form">
+            <!-- 标题 -->
+            <div id="form-title">
+                <!-- <label for="title">标题</label> -->
+                <input type="text" id="title" name="title" autocomplete="off" placeholder="标题:简短描述你的问题">
+            </div>
+
+            <!-- 标签 -->
+            <div id="form-group">
+                <!-- <label for="group">标签</label> -->
+                <input type="text" id="group" name="group" autocomplete="off" placeholder="标签:选择你的标签">
+                <!-- 标签 -->
+                <div id="tags">
+                    <ul id="nav-tabs">
+                      <li class="active"><a href="#开发语言">开发语言</a></li>
+                      <li><a href="#平台框架">平台框架</a></li>
+                      <li><a href="#服务器">服务器</a></li>
+                    </ul>
+
+                  <!-- 标签内容 -->
+                  <div id="tags-text">
+                  <!-- 开发语言标签 -->
+                    <div class="tab-pane active" id="开发语言">
+                      <ul calss="taglist">
+                        <li class="kai"><a href="#" class="tag">javascript</a></li>
+                        <li class="kai"><a href="#" class="tag">php</a></li>
+                        <li class="kai"><a href="#" class="tag">css</a></li>
+                      </ul>
+                    </div>
+                  <!-- 平台框架标签 -->
+                    <div class="tab-pane" id="平台框架">
+                      <ul class="raglist">
+                        <li class="kai"><a href="#" class="tag">laravel</a></li>
+                        <li class="kai"><a href="#" class="tag">flask</a></li>
+                        <li class="kai"><a href="#" class="tag">django</a></li>
+                      </ul>
+                    </div>
+
+                  </div>
+
+                </div>
+
+            </div>
+
+            <!-- 输入框 -->
+            <div id="text">
+                <textarea name="question" id="question" rows="20" cols="40" placeholder="1.描述你的问题
+2.贴上代码
+3.贴上报错信息
+4.贴上相关截图
+5.已经尝试过哪些方法仍然没有解决(附上相关链接)
+          "></textarea>
+            </div>
+
+            <div id="submit">
+                <button type="submit" id="sub" name="submit">发布问题</button>
+            </div>
+        </form>
 
     </div>
+    <script type="text/javascript">
+      $(function(){
+        $("#group").focus(function(){
+          $("#tags").slideToggle();
+        });
+        $("#group").focusout(function(){
+          $("#tags").slideToggle();
+        });
+        $("#")
 
-  </body>
+
+      });
+    </script>
+</body>
+
 </html>
