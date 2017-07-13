@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>quill.js-强大的现代富文本编辑器插件|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="formcss/form.css">
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/monokai-sublime.min.css"/>
+	<link href="css/themes/quill.snow.css" rel="stylesheet">
+	<style type="text/css">
+		#editor-container {
+		  height: 500px;
+		}
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="form-body">
+		<form class="form" action="#" method="post">
+			<!-- 问题标题 -->
+			<div id="form-title">
+				<input type="text" name="title" id="title" autocomplete="off" placeholder="标题:简短描述你的问题">
+			</div>
+			<!-- 问题标签 -->
+			<div id="form-group">
+				<!-- 标签添加框 -->
+					<div id="input">
+						<input type="text" id="group" name="group" autocomplete="off" placeholder="标签:选择你的标签">
+					</div>
+
+					<!-- 标签 -->
+					<div id="tags">
+							<ul id="nav-tabs">
+								<li class="active"><a href="#">开发语言</a></li>
+								<li><a href="#">平台框架</a></li>
+								<li><a href="#">服务器</a></li>
+								<li><a href="#">数据库和缓存</a></li>
+								<li><a href="#">开发工具</a></li>
+								<li><a href="#">系统设备</a></li>
+								<li><a href="#">其他</a></li>
+							</ul>
+					</div>
+
+					<!-- 标签内容 -->
+					<div id="tags-text">
+					<!-- 开发语言标签 -->
+						<div class="tab-pane active" style="display:none;" id="开发语言">
+							<ul calss="taglist">
+								<li class="kai"><a href="#" class="tag">javascript</a></li>
+								<li class="kai"><a href="#" class="tag">php</a></li>
+								<li class="kai"><a href="#" class="tag">css</a></li>
+							</ul>
+						</div>
+					<!-- 平台框架标签 -->
+						<div class="tab-pane"  id="平台框架">
+							<ul class="taglist">
+								<li class="kai"><a href="#" class="tag">laravel</a></li>
+								<li class="kai"><a href="#" class="tag">flask</a></li>
+								<li class="kai"><a href="#" class="tag">django</a></li>
+								<li class="kai"><a href="#" class="tag">django</a></li>
+							</ul>
+						</div>
+					</div>
+			</div>
+		<!-- 编辑器 -->
+		<div class="htmleaf-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 mt50">
+						<div id="standalone-container">
+							<div id="toolbar-container">
+								<span class="ql-formats">
+									<select class="ql-font"></select>
+								<select class="ql-size"></select>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-bold"></button>
+									<button class="ql-italic"></button>
+									<button class="ql-underline"></button>
+									<button class="ql-strike"></button>
+								</span>
+								<span class="ql-formats">
+									<select class="ql-color"></select>
+									<select class="ql-background"></select>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-script" value="sub"></button>
+									<button class="ql-script" value="super"></button>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-header" value="1"></button>
+									<button class="ql-header" value="2"></button>
+									<button class="ql-blockquote"></button>
+									<button class="ql-code-block"></button>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-list" value="ordered"></button>
+									<button class="ql-list" value="bullet"></button>
+									<button class="ql-indent" value="-1"></button>
+									<button class="ql-indent" value="+1"></button>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-direction" value="rtl"></button>
+									<select class="ql-align"></select>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-link"></button>
+									<button class="ql-image"></button>
+									<button class="ql-video"></button>
+									<button class="ql-formula"></button>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-clean"></button>
+								</span>
+							</div>
+								<div id="editor-container"></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</form>
+</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+	<script src="dist/quill.js"></script>
+	<!-- Initialize Quill editor -->
+	<script>
+		var quill = new Quill('#editor-container', {
+		    modules: {
+		      formula: true,
+		      syntax: true,
+		      toolbar: '#toolbar-container'
+		    },
+		    placeholder: 'Compose an epic...',
+		    theme: 'snow'
+		  });
+	</script>
+	<script type="text/javascript">
+
+		$(function(){
+		});
+	</script>
+</body>
+</html>

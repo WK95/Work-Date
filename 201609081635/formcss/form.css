@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+/*表单大体*/
+.form-body{
+    width:90%;
+    height:70%;
+    border:1px solid red;
+    margin: auto;
+    position: relative;
+}
+/*表单问题题目*/
+#form-title,#form-group{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+#title{
+    width:90%;
+    height:30px;  
+    border-radius:5px;
+}
+#title:focus,#group:focus{
+    border:1px solid #0ee;
+	box-shadow: 0 0 3px 0px #0ee;
+    outline-style: none;
+}
+/*问题标签与标签详细设计*/
+#form-group ul li{
+    margin-left:10px;
+    float:left;
+}
+#form-group{
+    margin-bottom:50px;
+}
+#group{
+    width:90%;
+    height:30px;
+    border-radius:5px;
+}
+#tags{
+    width:300px;
+    height:300px;
+    border:1px solid blue;
+    position: absolute;
+    display: none;
+}
+#nav-tabs{
+    width:300px;
+    height:150px;
+}
+#tags #nav-tabs .active a{
+    border:none;
+    color:#fff;
+    background: #009A61;
+}
+#tags #nav-tabs li a{
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 2px 5px;
+}
+#tags-text{
+    width:300px;
+    height:150px;
+    position: absolute;
+    top:20%;
+}
+.tab-pane{
+    position:absolute;
+    left:5px;
+    top:50px;
+    display:none;
+}
+.tab-pane ul li{
+    margin-left:5px;
+}
+.tag{
+    display:inline-block;
+    padding:0 8px;
+    color:#017E66;
+    background:rgba(1,126,102,0.08);
+    height:24px;
+    line-height: 24px;
+    font-weight:normal;
+    font-size: 13px;
+    text-align: center;
+    margin-top:5px;
+}
+/*编辑器位置调整*/
+.htmleaf-container{
+    margin-top:100px;
+}
+/*标签添加样式*/
+#input span{
+    display: inline-block;
+    color:#017e66;
+    background: #e7f2ed;
+    font-size:13px;
+    text-align: center;
+    margin-right:.5rem;
+    padding: 5px 8px;
+    line-height: 1;
+    margin-bottom: 5px; 
+    margin-top:3px;
+    cursor: pointer;
+}
+
+
+

@@ -6,7 +6,6 @@
     <title>Question</title>
     <link rel="stylesheet" href="./sass/css.css" media="screen">
     <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/question.js"></script>
 </head>
 
 <body>
@@ -21,19 +20,21 @@
             <!-- 标签 -->
             <div id="form-group">
                 <!-- <label for="group">标签</label> -->
-                <input type="text" id="group" name="group" autocomplete="off" placeholder="标签:选择你的标签">
+                <div id="input">
+                  <input type="text" id="group" name="group" autocomplete="off" placeholder="标签:选择你的标签">
+                </div>
                 <!-- 标签 -->
                 <div id="tags">
                     <ul id="nav-tabs">
-                      <li class="active"><a href="#开发语言">开发语言</a></li>
-                      <li><a href="#平台框架">平台框架</a></li>
-                      <li><a href="#服务器">服务器</a></li>
+                      <li class="active"><a href="#">开发语言</a></li>
+                      <li><a href="#">平台框架</a></li>
+                      <li><a href="#">服务器</a></li>
                     </ul>
 
                   <!-- 标签内容 -->
                   <div id="tags-text">
                   <!-- 开发语言标签 -->
-                    <div class="tab-pane active" id="开发语言">
+                    <div class="tab-pane active" style="display:block;" id="开发语言">
                       <ul calss="taglist">
                         <li class="kai"><a href="#" class="tag">javascript</a></li>
                         <li class="kai"><a href="#" class="tag">php</a></li>
@@ -41,11 +42,13 @@
                       </ul>
                     </div>
                   <!-- 平台框架标签 -->
-                    <div class="tab-pane" id="平台框架">
-                      <ul class="raglist">
+                    <div class="tab-pane"  id="平台框架">
+                      <ul class="taglist">
                         <li class="kai"><a href="#" class="tag">laravel</a></li>
                         <li class="kai"><a href="#" class="tag">flask</a></li>
                         <li class="kai"><a href="#" class="tag">django</a></li>
+                        <li class="kai"><a href="#" class="tag">django</a></li>
+
                       </ul>
                     </div>
 
@@ -57,12 +60,7 @@
 
             <!-- 输入框 -->
             <div id="text">
-                <textarea name="question" id="question" rows="20" cols="40" placeholder="1.描述你的问题
-2.贴上代码
-3.贴上报错信息
-4.贴上相关截图
-5.已经尝试过哪些方法仍然没有解决(附上相关链接)
-          "></textarea>
+
             </div>
 
             <div id="submit">
@@ -72,18 +70,53 @@
 
     </div>
     <script type="text/javascript">
+
       $(function(){
-        $("#group").focus(function(){
-          $("#tags").slideToggle();
+
+        $("#input").click(function(){
+          $("#group").focus();
+          $("#tags").show();
         });
-        $("#group").focusout(function(){
-          $("#tags").slideToggle();
+          //显示标签页
+          $("#nav-tabs>li").click(function(){
+            $(this).addClass("active").siblings().removeClass();
+          });
+          //显示详细标签
+          for (var i = 0, len = $("#tags #nav-tabs>li").length;i<len;i++){
+            $("#nav-tabs>li").eq(i).click(i,function(event){
+              $(".tab-pane").eq(event.data).show().siblings(".tab-pane").hide();
+            });
+          };
+
+        //标签页的显示与隐藏
+        $("#tags").mouseover(function(){
+          $("#tags").show();
+        }).mouseout(function(){
+          $("#tags").hide();
         });
-        $("#")
+
+
+        //添加与删除标签
+        for (var j = 0,len = 10000; j<len; j++){
+          $(".kai").eq(j).click(j,function(event){
+            var a = $(".kai").eq(event.data).text();
+            // $("#group").hide();
+            if ($("#input>span").length<5){
+              $("#input").prepend("<span>" + a + "</span>");
+              $("#input span").click(function(){
+                $(this).remove();
+                // if ($("#input span").length <1){
+                //   $("#group").show();
+                // }
+              });
+            }
+          });
+        };
 
 
       });
     </script>
+
 </body>
 
 </html>

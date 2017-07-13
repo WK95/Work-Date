@@ -43,7 +43,13 @@ li {
 	height: 30px;
 	border:1px solid #9E9E9E;
 }
-#title:focus,#group:focus{
+#group{
+    border:none;
+}
+#group:focus{
+    outline-style:none;
+}
+#title:focus,#input:focus{
 	border:1px solid #0ee;
 	box-shadow: 0 0 3px 0px #0ee;
 	outline-style: none;
@@ -67,6 +73,12 @@ li {
 }
 
 //inpu提示字体相关设置
+#input{
+    width:500px;
+    height:30px;
+    border:1px solid gray;
+    border-radius:5px;
+}
 input::-webkit-input-placeholder {
 	/* WebKit browsers */
 	color: #757575;
@@ -134,6 +146,7 @@ input:-ms-input-placeholder {
     position:absolute;
     left:5px;
     top:50px;
+    display:none;
 }
 .tab-pane ul li{
     margin-left:5px;
@@ -148,6 +161,7 @@ input:-ms-input-placeholder {
     font-weight:normal;
     font-size: 13px;
     text-align: center;
+    margin-top:5px;
 }
 #tags #nav-tabs .active a{
     border:none;
@@ -158,4 +172,24 @@ input:-ms-input-placeholder {
     border-radius: 3px;
     font-size: 14px;
     padding: 2px 5px;
+}
+.tag:hover{
+    background:#017E66;
+    color:#fff;
+    text-decoration:none;
+}
+
+//标签添加样式
+#input span{
+    display: inline-block;
+    color:#017e66;
+    background: #e7f2ed;
+    font-size:13px;
+    text-align: center;
+    margin-right:.5rem;
+    padding: 5px 8px;
+    line-height: 1;
+    margin-bottom: 5px; 
+    margin-top:3px;
+    cursor: pointer;
 }
