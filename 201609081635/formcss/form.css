@@ -1,3 +1,6 @@
+body{
+    background:#F3F3F3;
+}
 *{
     margin:0;
     padding:0;
@@ -26,12 +29,11 @@ a:hover{
 }
 #title{
     width:90%;
-    height:30px;  
-    border-radius:5px;
+    height:30px;
 }
 #title:focus,#group:focus{
     border:1px solid #0ee;
-	box-shadow: 0 0 3px 0px #0ee;
+	  box-shadow: 0 0 3px 0px #0ee;
     outline-style: none;
 }
 /*问题标签与标签详细设计*/
@@ -43,9 +45,8 @@ a:hover{
     margin-bottom:50px;
 }
 #group{
-    width:90%;
+    width:30%;
     height:30px;
-    border-radius:5px;
 }
 #tags{
     width:300px;
@@ -53,6 +54,8 @@ a:hover{
     border:1px solid blue;
     position: absolute;
     display: none;
+    z-index: 5;
+    background:#fff;
 }
 #nav-tabs{
     width:300px;
@@ -109,10 +112,78 @@ a:hover{
     margin-right:.5rem;
     padding: 5px 8px;
     line-height: 1;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
     margin-top:3px;
     cursor: pointer;
 }
-
-
-
+/*标签设置框样式*/
+#input{
+    width:90%;
+    height:30px;
+    border:1px solid
+}
+/*悬赏设置*/
+#submit{
+    width:100%;
+    height:50px;
+    position:relative;
+}
+#sub{
+	display: inline-block;
+	width:100px;
+	height:35px;
+	text-align: center;
+	color: #fff;
+	font-size:14px;
+	font-weight: 900;
+	background-color: #009a61;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	cursor:pointer;
+	border:1px solid transparent;
+	border-radius:5px;
+    position: absolute;
+    right:10px;
+    bottom:5px;
+}
+#sub:focus{
+	outline-style: none;
+	border-radius:5px;
+	background: #006741;
+}
+.reward{
+    width:30%;
+    height:30px;
+    position: absolute;
+    left:10px;
+    top:10px;
+}
+#reward{
+    width:100%;
+    height:30px;
+    border:1px solid #E0E0E0;
+}
+#reward:focus{
+    outline-style:none;
+    border: 1px solid #0ee;
+}
+/*input提示字体样式*/
+input::-webkit-input-placeholder {
+	/* WebKit browsers */
+	color: #757575;
+	font-size: 14px;
+}
+input:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #757575;
+	font-size: 14px;
+}
+input::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #757575;
+	font-size: 14px;
+}
+input:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	color: #757575;
+	font-size: 14px;
+}
