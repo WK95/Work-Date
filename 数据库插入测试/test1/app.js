@@ -4,6 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var url = "mongodb://mydb:123@ds153682.mlab.com:53682/text";
+mongoose.connect(url);
 
 var index = require('./routes/index');
 var users = require('./routes/users');

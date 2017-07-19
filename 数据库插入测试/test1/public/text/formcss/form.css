@@ -18,7 +18,6 @@ a:hover{
 .form-body{
     width:90%;
     height:70%;
-    border:1px solid red;
     margin: auto;
     position: relative;
 }
